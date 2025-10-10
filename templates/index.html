@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simple Checkers Game</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Simple Checkers Game</h1>
+
+    <h2 id="turn-indicator">Current Turn: <span id="turn-player">Red</span></h2>
+    <div id="scoreboard">
+      <p>Red Captured: <span id="red-score">0</span></p>
+      <p>Black Captured: <span id="black-score">0</span></p>
+    </div>
+
+    <p>Logged in as: <strong>{{ user_email }}</strong></p>
+    <a href="{{ url_for('logout') }}">Logout</a>
+
+    <div class="board">
+      <!-- Row 1 -->
+      <div class="row">
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece red"></div></div>
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece red"></div></div>
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece red"></div></div>
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece red"></div></div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="row">
+        <div class="square dark"><div class="piece red"></div></div>
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece red"></div></div>
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece red"></div></div>
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece red"></div></div>
+        <div class="square light"></div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="row">
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece red"></div></div>
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece red"></div></div>
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece red"></div></div>
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece red"></div></div>
+      </div>
+
+      <!-- Row 4 -->
+      <div class="row">
+        <div class="square dark"></div>
+        <div class="square light"></div>
+        <div class="square dark"></div>
+        <div class="square light"></div>
+        <div class="square dark"></div>
+        <div class="square light"></div>
+        <div class="square dark"></div>
+        <div class="square light"></div>
+      </div>
+
+      <!-- Row 5 -->
+      <div class="row">
+        <div class="square light"></div>
+        <div class="square dark"></div>
+        <div class="square light"></div>
+        <div class="square dark"></div>
+        <div class="square light"></div>
+        <div class="square dark"></div>
+        <div class="square light"></div>
+        <div class="square dark"></div>
+      </div>
+
+      <!-- Row 6 -->
+      <div class="row">
+        <div class="square dark"><div class="piece black"></div></div>
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece black"></div></div>
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece black"></div></div>
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece black"></div></div>
+        <div class="square light"></div>
+      </div>
+
+      <!-- Row 7 -->
+      <div class="row">
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece black"></div></div>
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece black"></div></div>
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece black"></div></div>
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece black"></div></div>
+      </div>
+
+      <!-- Row 8 -->
+      <div class="row">
+        <div class="square dark"><div class="piece black"></div></div>
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece black"></div></div>
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece black"></div></div>
+        <div class="square light"></div>
+        <div class="square dark"><div class="piece black"></div></div>
+        <div class="square light"></div>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
